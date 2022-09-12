@@ -1,0 +1,36 @@
+// @forward 'style';
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Prata", serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin-top: 0;
+}
+.container {
+  background: rgb(207, 205, 200);
+}
+.sub-container {
+  width: 92%;
+  margin: auto;
+  background: white;
+  padding: 0 0.5em;
+  max-width: 950px;
+}
+

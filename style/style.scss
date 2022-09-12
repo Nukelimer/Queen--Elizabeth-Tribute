@@ -1,0 +1,378 @@
+@import url("https://fonts.googleapis.com/css2?family=Prata&family=Raleway:wght@100;300;400&display=swap");
+
+@import "global";
+
+.row {
+  display: flex;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  width: 50px;
+}
+.hamburger {
+
+  position: fixed;
+  right: 3.2em;
+  top: 1.7em;
+  width: 7%;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  display: block;
+  margin: 0 auto;
+  height: 3px;
+  background: #767272;
+}
+
+.hamburger::after,
+.hamburger::before {
+  content: "";
+  width: 100%;
+}
+
+.hamburger::after {
+  transform: translateY(3px);
+}
+.hamburger::before {
+  transform: translateY(-6px);
+}
+
+.hamburger:hover,
+.hamburger:active,
+.hamburger::after:hover,
+.hamburger::before:hover,
+.hamburger::after:active,
+.hamburger::before:active {
+  background: #490202;
+}
+
+.nav-link {
+  display: none;
+  transition: ease-in 2ms;
+
+  .link {
+    text-align: right;
+    font-size: small;
+    padding: 0 1em;
+    top: 5em;
+    transform: translateX(-95%);
+    background: #666666;
+    padding-right: 3em;
+    height: 97vh;
+    width: 96%;
+    position: fixed;
+    transform: translateX(-6rem);
+   z-index: 67;
+   
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      padding: 1em 0 0 0;
+      color: #040404;
+       }
+  }
+}
+
+.nav-link__ {
+  display: flex;
+}
+.hero {
+  background: url(../images/hero\ image.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: grayscale(5px);
+  padding: 0.4em 1em 2em 1em;
+  background-clip: padding-box;
+}
+.year {
+  font-size: 0.7em;
+  padding: 0.5em 0;
+  color: #666666;
+  margin-left: 2em;
+}
+.heading {
+  font-size: 1.5em;
+  margin-bottom: 1.5em;
+  text-align: center;
+  line-height: 1.5em;
+}
+.quote {
+  font-weight: bold;
+  font-size: 0.8em;
+  line-height: 1.5em;
+  margin-bottom: 1.2em;
+  text-align: justify;
+}
+.hero-paragraph__author {
+  font-weight: bold;
+  font-size: 0.8em;
+  line-height: 1.5em;
+}
+.secondary-section {
+  background: #111111;
+  color: #d9d9d9;
+}
+.biography {
+  font-size: 0.8em;
+  padding: 1em 0 0 1em;
+}
+.secondary_section-second__heading {
+  padding: 0.5em;
+  text-align: center;
+}
+.secondary_section__paragraph {
+  color: #666666;
+  font-size: 0.9em;
+  padding: 0 1em 2em;
+  text-align: justify;
+}
+.biography__resize {
+  padding: 2em 1em;
+}
+.biography_ {
+  color: #666666;
+  font-size: 0.9em;
+  margin-bottom: 0.99em;
+  img {
+    width: 100%;
+  }
+}
+.last-section {
+  background: #111111;
+  .tribute {
+    color: #d9d9d9;
+    text-align: center;
+    margin: 1em 0;
+    padding-top: 1em;
+  }
+  input {
+    padding: 1em 1em;
+    width: 90%;
+    margin: auto;
+    border-radius: 3px;
+    background: #d9d9d9;
+  }
+  button {
+    background: rgba(174, 161, 108, 1);
+    width: 40%;
+    font-size: 0.7em;
+    padding: 0.8em 1.2em;
+    margin: 0.5em auto 1.5em;
+    border-radius: 7px;
+    border: none;
+    outline: none;
+    color: #111111;
+  }
+  button:hover,
+  button:active {
+    background: #111111;
+    color: rgba(174, 161, 108, 1);
+    text-transform: uppercase;
+  }
+
+  .input__ {
+    display: flex;
+    flex-direction: column;
+  }
+}
+footer {
+  p {
+    text-align: center;
+    font-size: 0.7em;
+    padding: 1.3em 0;
+    // padding-bottom: 3em;
+  }
+}
+
+@media (min-width: 600px) {
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+
+    .hamburger{
+        display: none;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+
+      .link {
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        // justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        position: static;
+        transform: translateX(0px);
+        background: none;
+        padding-right: 1em;
+
+        .links {
+          margin-left: 1em;
+          align-self: center;
+          
+        
+        }
+
+
+        .link-btn {
+         
+          background: rgba(174, 161, 108, 1);
+          padding: 0.3em 0.5em;
+          border-radius: 3px;
+          margin-top: 0.6em;
+        }
+        .links:active,
+        .links:hover {
+          // transition: ease 1s;
+
+          color: #767272;
+          border-bottom: 3px solid #767272;
+          border-left: 2px solid #767272;
+          border-right: 2px solid #767272;
+          //   border-radius: 2px;
+          padding: 0 0.2em;
+        }
+        .link-btn:hover,
+        .link-btn:after {
+          color: rgba(174, 161, 108, 1);
+          background: #111111;
+          transition: ease-in 1s;
+          border: none;
+        }
+      }
+    }
+  }
+
+  .hero-paragraph {
+    width: 50%;
+
+    .year {
+      margin: 0;
+    }
+    .heading {
+      font-size: 2.2em;
+      text-align: left;
+      margin: 0 0 30px;
+    }
+  }
+
+  .secondary-section {
+    display: flex;
+    .biography {
+      margin-left: 4em;
+      padding-top: 6em;
+    }
+    .secondary_section-second {
+      width: 50%;
+      align-self: center;
+      padding: 0 1.5em;
+    }
+  }
+  .third-section {
+    display: flex;
+    gap: 1em;
+    .biography__resize {
+      margin-top: 4em;
+    }
+  }
+  .biography__ {
+    display: flex;
+    flex-direction: column;
+    width: 49%;
+    align-items: stretch;
+    height: 100%;
+
+    p {
+      text-align: justify;
+      margin: 0.5em;
+      font-size: 0.7em;
+      padding-top: 4em;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+  .middle {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    padding: 1.5em 0;
+    justify-content: center;
+    align-items: center;
+  }
+  .biography_second {
+    display: flex;
+    align-items: stretch;
+    height: 40%;
+    p {
+      margin-left: 1em;
+      font-size: 0.7em;
+      text-align: left;
+      width: 28%;
+    }
+    img {
+      align-self: stretch;
+      width: 80%;
+      height: 80%;
+    }
+  }
+  .biography_third {
+    display: flex;
+    height: 40%;
+    align-items: stretch;
+    p {
+      width: 28%;
+      margin-left: 1em;
+      font-size: 0.7em;
+      text-align: left;
+    }
+    img {
+      align-self: stretch;
+      width: 80%;
+      height: 80%;
+    }
+  }
+  .biography_last {
+    width: 50%;
+    margin-top: 4.5em;
+    p {
+      font-size: 0.7em;
+      padding: 4em 0 0 0;
+    }
+  }
+
+  .input__ {
+    display: flex;
+    flex-direction: row !important;
+    width: 80%;
+    margin: auto;
+    padding-bottom: 2em;
+    input {
+      margin: 0;
+      border: none;
+      border-radius: 3px 0px 0px 3px;
+    }
+
+    button {
+      border-bottom-left-radius: 0px;
+      border-top-left-radius: 0px;
+      border: none;
+      margin: 0;
+      padding: 0.3em;
+      transition: ease-in-out 1s;
+    }
+  }
+}
